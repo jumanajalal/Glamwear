@@ -7,6 +7,12 @@ import { useAuth } from '../context/AuthContext';
 function MainContent() {
   const { showAuthPage } = useAuth();
 
+  const handleLinkClick = (event: React.MouseEvent<HTMLAnchorElement>, route: string) => {
+    event.preventDefault();
+    // TODO: Add navigation logic here
+    console.log(`Navigating to: ${route}`);
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
       <Navbar />
@@ -25,32 +31,39 @@ function MainContent() {
             <div>
               <h3 className="text-lg font-semibold mb-4">About Us</h3>
               <ul className="space-y-2">
-                <li>
-                  <a 
-                    href="/about/our-story" 
-                    className="text-gray-300 hover:text-white"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      // TODO: Implement navigation
-                    }}
-                  >
-                    Our Story
-                  </a>
-                </li>
-                <li>
-                  <a 
-                    href="/about/careers" 
-                    className="text-gray-300 hover:text-white"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      // TODO: Implement navigation
-                    }}
-                  >
-                    Careers
-                  </a>
-                </li>
+                <li><a href="/about/story" onClick={(e) => handleLinkClick(e, '/about/story')} className="text-gray-300 hover:text-white">Our Story</a></li>
+                <li><a href="/about/careers" onClick={(e) => handleLinkClick(e, '/about/careers')} className="text-gray-300 hover:text-white">Careers</a></li>
+                <li><a href="/about/press" onClick={(e) => handleLinkClick(e, '/about/press')} className="text-gray-300 hover:text-white">Press</a></li>
               </ul>
             </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Customer Service</h3>
+              <ul className="space-y-2">
+                <li><a href="/contact" onClick={(e) => handleLinkClick(e, '/contact')} className="text-gray-300 hover:text-white">Contact Us</a></li>
+                <li><a href="/shipping" onClick={(e) => handleLinkClick(e, '/shipping')} className="text-gray-300 hover:text-white">Shipping Info</a></li>
+                <li><a href="/returns" onClick={(e) => handleLinkClick(e, '/returns')} className="text-gray-300 hover:text-white">Returns</a></li>
+                <li><a href="/faq" onClick={(e) => handleLinkClick(e, '/faq')} className="text-gray-300 hover:text-white">FAQ</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+              <ul className="space-y-2">
+                <li><a href="/size-guide" onClick={(e) => handleLinkClick(e, '/size-guide')} className="text-gray-300 hover:text-white">Size Guide</a></li>
+                <li><a href="/gift-cards" onClick={(e) => handleLinkClick(e, '/gift-cards')} className="text-gray-300 hover:text-white">Gift Cards</a></li>
+                <li><a href="/store-locator" onClick={(e) => handleLinkClick(e, '/store-locator')} className="text-gray-300 hover:text-white">Store Locator</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Connect With Us</h3>
+              <ul className="space-y-2">
+                <li><a href="https://www.instagram.com/glamwear" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">Instagram</a></li>
+                <li><a href="https://www.facebook.com/glamwear" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">Facebook</a></li>
+                <li><a href="https://www.twitter.com/glamwear" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">Twitter</a></li>
+              </ul>
+            </div>
+          </div>
+          <div className="mt-12 pt-8 border-t border-gray-800 text-center text-gray-400">
+            <p>&copy; {new Date().getFullYear()} GlamWear. All rights reserved.</p>
           </div>
         </div>
       </footer>
