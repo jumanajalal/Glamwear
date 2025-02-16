@@ -39,6 +39,10 @@ A modern e-commerce platform for fashion and style, built with React and TypeScr
 
 4. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
+## Deployed 
+
+https://glamwear.onrender.com/
+
 ## Available Scripts
 
 - `npm start` - Runs the app in development mode
