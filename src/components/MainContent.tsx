@@ -7,11 +7,6 @@ import { products } from '../data/products';
 function MainContent() {
   const { showAuthPage } = useAuth();
 
-  const handleLinkClick = (event: React.MouseEvent<HTMLAnchorElement>, route: string) => {
-    event.preventDefault();
-    // Add logic to navigate to the route
-  };
-
   return (
     <div className="flex-grow">
       {showAuthPage ? (
@@ -70,7 +65,7 @@ function MainContent() {
             <div className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
               <div className="sm:flex sm:items-baseline sm:justify-between">
                 <h2 className="text-2xl font-extrabold tracking-tight text-gray-900">Shop by Category</h2>
-                <a href="#" className="hidden text-sm font-semibold text-red-600 hover:text-red-500 sm:block">
+                <a href="/categories" className="hidden text-sm font-semibold text-red-600 hover:text-red-500 sm:block">
                   Browse all categories<span aria-hidden="true"> &rarr;</span>
                 </a>
               </div>
@@ -88,7 +83,7 @@ function MainContent() {
                       />
                     </div>
                     <h3 className="mt-4 text-lg font-medium text-gray-900">
-                      <a href="#">
+                      <a href={`/category/${category.toLowerCase()}`}>
                         <span className="absolute inset-0" />
                         {category}
                       </a>
@@ -99,7 +94,7 @@ function MainContent() {
               </div>
 
               <div className="mt-6 sm:hidden">
-                <a href="#" className="block text-sm font-semibold text-red-600 hover:text-red-500">
+                <a href="/categories" className="block text-sm font-semibold text-red-600 hover:text-red-500">
                   Browse all categories<span aria-hidden="true"> &rarr;</span>
                 </a>
               </div>

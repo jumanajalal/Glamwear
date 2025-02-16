@@ -35,13 +35,13 @@ const Navbar = () => {
           <div className="flex justify-between items-center h-10">
             {/* Left side links */}
             <div className="flex items-center space-x-6">
-              <a href="#" className="text-sm text-gray-500 hover:text-gray-700">
+              <a href="/help" className="text-sm text-gray-500 hover:text-gray-700">
                 {t('navbar.help')}
               </a>
-              <a href="#" className="text-sm text-gray-500 hover:text-gray-700">
+              <a href="/track" className="text-sm text-gray-500 hover:text-gray-700">
                 {t('navbar.track')}
               </a>
-              <a href="#" className="text-sm text-gray-500 hover:text-gray-700">
+              <a href="/order" className="text-sm text-gray-500 hover:text-gray-700">
                 {t('navbar.order')}
               </a>
             </div>
@@ -71,7 +71,7 @@ const Navbar = () => {
       <div className="container-custom">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="#" className="flex-shrink-0">
+          <a href="/" className="flex-shrink-0">
             <span className="text-2xl font-bold text-gray-900">
               GlamWear
             </span>
@@ -94,19 +94,19 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center justify-between flex-1">
             <div className="flex items-center space-x-8">
-              <a href="#" className="text-gray-700 hover:text-gray-900 font-medium">
+              <a href="/new" className="text-gray-700 hover:text-gray-900 font-medium">
                 {t('navbar.new')}
               </a>
-              <a href="#" className="text-gray-700 hover:text-gray-900 font-medium">
+              <a href="/women" className="text-gray-700 hover:text-gray-900 font-medium">
                 {t('navbar.women')}
               </a>
-              <a href="#" className="text-gray-700 hover:text-gray-900 font-medium">
+              <a href="/men" className="text-gray-700 hover:text-gray-900 font-medium">
                 {t('navbar.men')}
               </a>
-              <a href="#" className="text-gray-700 hover:text-gray-900 font-medium">
+              <a href="/kids" className="text-gray-700 hover:text-gray-900 font-medium">
                 {t('navbar.kids')}
               </a>
-              <a href="#" className="text-red-600 hover:text-red-700 font-medium">
+              <a href="/sale" className="text-red-600 hover:text-red-700 font-medium">
                 {t('navbar.sale')}
               </a>
             </div>
@@ -155,19 +155,19 @@ const Navbar = () => {
       {/* Mobile menu */}
       <div className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'}`}>
         <div className="px-2 pt-2 pb-3 space-y-1">
-          <a href="#" className="block px-3 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-md">
+          <a href="/new" className="block px-3 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-md">
             {t('navbar.new')}
           </a>
-          <a href="#" className="block px-3 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-md">
+          <a href="/women" className="block px-3 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-md">
             {t('navbar.women')}
           </a>
-          <a href="#" className="block px-3 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-md">
+          <a href="/men" className="block px-3 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-md">
             {t('navbar.men')}
           </a>
-          <a href="#" className="block px-3 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-md">
+          <a href="/kids" className="block px-3 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-md">
             {t('navbar.kids')}
           </a>
-          <a href="#" className="block px-3 py-2 text-red-600 hover:text-red-700 hover:bg-gray-50 rounded-md">
+          <a href="/sale" className="block px-3 py-2 text-red-600 hover:text-red-700 hover:bg-gray-50 rounded-md">
             {t('navbar.sale')}
           </a>
         </div>
