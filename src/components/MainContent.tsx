@@ -25,8 +25,30 @@ function MainContent() {
             <div>
               <h3 className="text-lg font-semibold mb-4">About Us</h3>
               <ul className="space-y-2">
-                <li><a href="#" className="text-gray-300 hover:text-white">Our Story</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-white">Careers</a></li>
+                <li>
+                  <a 
+                    href="/about/our-story" 
+                    className="text-gray-300 hover:text-white"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      // TODO: Implement navigation
+                    }}
+                  >
+                    Our Story
+                  </a>
+                </li>
+                <li>
+                  <a 
+                    href="/about/careers" 
+                    className="text-gray-300 hover:text-white"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      // TODO: Implement navigation
+                    }}
+                  >
+                    Careers
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
